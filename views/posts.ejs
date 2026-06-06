@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post | SocialConnect</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500">
+
+    <!-- Logo -->
+    <a href="/" class="absolute top-6 left-6 flex items-center gap-3">
+        <div class="w-12 h-12 rounded-xl bg-white flex items-center justify-center shadow-lg">
+            <span class="text-indigo-600 text-2xl font-bold">S</span>
+        </div>
+
+        <div>
+            <h1 class="text-2xl font-extrabold text-white">
+                SocialConnect
+            </h1>
+            <p class="text-xs text-gray-200">
+                Connect • Share • Explore
+            </p>
+        </div>
+    </a>
+
+    <!-- Form Container -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+
+        <div class="w-full max-w-2xl bg-white rounded-3xl shadow-2xl p-8">
+
+            <h1 class="text-4xl font-bold text-center text-gray-800 mb-2">
+                Create a Post
+            </h1>
+
+            <p class="text-center text-gray-500 mb-8">
+                Share your thoughts with the community
+            </p>
+
+            <form action="/posts" method="POST" class="space-y-6">
+
+                <!-- Title -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">
+                        Title
+                    </label>
+
+                    <input
+                        type="text"
+                        name="title"
+                        placeholder="Enter post title..."
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                    >
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <label class="block text-gray-700 font-medium mb-2">
+                        Content
+                    </label>
+
+                    <textarea
+                        name="posttext"
+                        rows="8"
+                        placeholder="What's on your mind?"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-xl resize-none focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                    ></textarea>
+                </div>
+
+                <!-- Button -->
+                <button
+                    type="submit"
+                    class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-3 rounded-xl font-semibold hover:scale-[1.02] transition duration-300 shadow-lg"
+                >
+                    🚀 Publish Post
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
